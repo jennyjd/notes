@@ -1,8 +1,13 @@
-.note_container
-  margin: 50px auto
-  width: 40%
-  border: 1px solid lightgrey
-  padding: 10px
+.container
   display: flex
-  flex-wrap: wrap
-  justify-content: left
+  justify-content: center
+  & > div
+    padding: 10px
+    box-shadow: 1px 1px 5px grey
+  .note_form_container
+    margin-right: 20px
+  .note_container
+    width: 40%
+    display: flex
+    flex-wrap: wrap
+    justify-content: left

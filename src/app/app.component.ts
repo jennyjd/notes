@@ -9,9 +9,9 @@ import Note from './note/note';
 export class AppComponent {
   title: string = 'Notes App';
   notes: Note[] = [
-    new Note('Заголовок', 'кекус пекус', 'green'),
-    new Note('Трав овар', 'трали вали', 'white'),
-    new Note('Вроыв ыоп', 'юпи тупи', 'blue'),
-    new Note('Вываол', 'чака лака', 'yellow'),
+    new Note('Заголовок', 'кекус пекус', '#f9aaaa'),
+    new Note('Трав овар', 'трали вали', 'rgba(84,218,64,0.34)'),
+    new Note('Вроыв ыоп', 'юпи тупи', 'rgba(17,197,255,0.31)'),
+    new Note('Вываол', 'чака лака', 'rgba(255,217,8,0.33)'),
   ];
 }

@@ -1,0 +1,16 @@
+<form class="ui form note_form" (ngSubmit)="onSubmit($event)">
+  <h3>Add new note</h3>
+  <div class="field">
+    <label>Title</label>
+    <input type="text" name="title" [(ngModel)]="note.title" name="title" #title="ngModel"/>
+  </div>
+  <div class="field">
+    <label>Text</label>
+    <textarea rows="4" [(ngModel)]="note.text" name="text" #text="ngModel"></textarea>
+  </div>
+  <div class="field">
+    <label>Pick note color</label>
+    <input [(colorPicker)]="note.color" [style.background]="note.color" [value]="note.color"/>
+  </div>
+  <button type="submit" class="ui teal basic button">Add note</button>
+</form>

@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { NgSemanticModule } from "ng-semantic";
+import { ColorPickerModule } from 'angular4-color-picker';
 
 import { AppComponent } from './app.component';
 import { NoteComponent } from './note/note.component';
+import { NoteFormComponent } from './note-form/note-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NoteComponent
+    NoteComponent,
+    NoteFormComponent
   ],
   imports: [
     BrowserModule,
-    NgSemanticModule
+    NgSemanticModule,
+    ColorPickerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

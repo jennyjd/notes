@@ -3,10 +3,15 @@
   <h1>
     Welcome to {{title}}!!
   </h1>
-  <div class="note_container">
-    <app-note *ngFor="let note of notes"
-      [note]="note"
-    >
-    </app-note>
+  <div class="container">
+    <div class="note_form_container">
+      <app-note-form></app-note-form>
+    </div>
+    <div class="note_container">
+      <app-note *ngFor="let note of notes"
+        [note]="note"
+      >
+      </app-note>
+    </div>
   </div>
 </div>
