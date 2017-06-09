@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Note from './note/note';
 
 @Component({
   selector: 'app-root',
@@ -6,27 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'Notes App';
-  notes = [
-    {
-      title: 'Заголовок',
-      text: 'кекус пекус',
-      color: 'green'
-    },
-    {
-      title: 'Трав овар',
-      text: 'трали вали',
-      color: 'white'
-    },
-    {
-      title: 'Вроыв ыоп',
-      text: 'юпи тупи',
-      color: 'blue'
-    },
-    {
-      title: 'Вываол',
-      text: 'чака лака',
-      color: 'yellow'
-    },
+  title: string = 'Notes App';
+  notes: Note[] = [
+    new Note('Заголовок', 'кекус пекус', 'green'),
+    new Note('Трав овар', 'трали вали', 'white'),
+    new Note('Вроыв ыоп', 'юпи тупи', 'blue'),
+    new Note('Вываол', 'чака лака', 'yellow'),
   ];
 }
