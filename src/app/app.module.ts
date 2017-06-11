@@ -7,12 +7,14 @@ import { ColorPickerModule } from 'angular4-color-picker';
 import { AppComponent } from './app.component';
 import { NoteComponent } from './note/note.component';
 import { NoteFormComponent } from './note-form/note-form.component';
+import { NoteActionsComponent } from './note-actions/note-actions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NoteComponent,
-    NoteFormComponent
+    NoteFormComponent,
+    NoteActionsComponent
   ],
   imports: [
     BrowserModule,

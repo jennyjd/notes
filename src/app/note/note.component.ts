@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import Note from './note';
 
 @Component({
@@ -6,11 +6,17 @@ import Note from './note';
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.sass']
 })
-export class NoteComponent implements OnInit {
+export class NoteComponent {
   @Input() note: Note;
+  display: string = 'none';
 
   constructor() { }
 
-  ngOnInit() {
+  enter() {
+    this.display = 'block'
+  }
+
+  leave() {
+    this.display = 'none'
   }
 }
