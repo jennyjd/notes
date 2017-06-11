@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-note-actions',
   templateUrl: './note-actions.component.html',
   styleUrls: ['./note-actions.component.sass']
 })
-export class NoteActionsComponent implements OnInit {
+export class NoteActionsComponent {
+   @Output() onDelete: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit() {
+  delete(): void {
+    this.onDelete.emit();
   }
 
 }

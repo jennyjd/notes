@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import NoteService from './note.service';
 import Note from './note';
 
 @Component({
@@ -6,17 +7,22 @@ import Note from './note';
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.sass']
 })
+
 export class NoteComponent {
   @Input() note: Note;
-  display: string = 'none';
+  displayActions: string = 'none';
 
-  constructor() { }
+  constructor(private noteService: NoteService) { }
+
+  deleteNote() {
+    this.noteService.deleteNode(this.note.id);
+  }
 
   enter() {
-    this.display = 'block'
+    this.displayActions = 'block'
   }
 
   leave() {
-    this.display = 'none'
+    this.displayActions = 'none'
   }
 }

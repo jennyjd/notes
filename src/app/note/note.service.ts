@@ -18,8 +18,16 @@ class NoteService {
     return this.notes;
   }
 
-  addNote(note): void {
+  addNote(note: Note): void {
     this.notes.push(note);
+  }
+
+  deleteNode(note_id: number): void {
+    this.notes.forEach((note, ind) => {
+      if (note.id == note_id) {
+        this.notes.splice(ind,1);
+      }
+    });
   }
 }
 

@@ -3,5 +3,9 @@
   <p class="note_header">{{note.title}}</p>
   <div class="ui divider"></div>
   <p class="note_text">{{note.text}}</p>
-  <app-note-actions [ngClass]="display"></app-note-actions>
+  <app-note-actions
+    [ngClass]="displayActions"
+    (onDelete)="deleteNote()"
+  >
+  </app-note-actions>
 </div>
