@@ -15,12 +15,17 @@ export class NoteFormComponent {
   constructor(private cpService: ColorPickerService, private noteService: NoteService) { }
 
   onSubmit(e, noteForm: NgForm) {
+    console.log(this.note);
     e.preventDefault();
     this.noteService.addNote(this.note);
     this.clearForm();
   }
 
-  clearForm() {
+  clearForm(): void {
     this.note = new Note();
+  }
+
+  changeTextColor(element: HTMLInputElement): void {
+    this.note.text_color = element.value;
   }
 }

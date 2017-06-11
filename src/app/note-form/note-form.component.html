@@ -1,16 +1,31 @@
-<form class="ui form note_form" (ngSubmit)="onSubmit($event,noteForm)" #noteForm="ngForm">
+<form class="ui form" (ngSubmit)="onSubmit($event,noteForm)" #noteForm="ngForm">
   <h3>Add new note</h3>
   <div class="field">
     <label>Title</label>
-    <input type="text" name="title" [(ngModel)]="note.title" name="title" #title="ngModel"/>
+    <input type="text" name="title" [(ngModel)]="note.title" name="title" #title required/>
   </div>
   <div class="field">
     <label>Text</label>
-    <textarea rows="4" [(ngModel)]="note.text" name="text" #text="ngModel"></textarea>
+    <textarea rows="4" [(ngModel)]="note.text" name="text" #text required></textarea>
   </div>
   <div class="field">
     <label>Pick note color</label>
-    <input [(colorPicker)]="note.color" [style.background]="note.color" [value]="note.color"/>
+    <input [(colorPicker)]="note.background_color" [style.background]="note.background_color" [value]="note.background_color"/>
+  </div>
+  <div class="grouped fields">
+    <label>Pick text color</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" value="black" name="text_color" #black (change)="changeTextColor(black)" checked>
+        <label class="checkbox">Black</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" value="white" name="text_color" #white (change)="changeTextColor(white)">
+        <label class="checkbox">White</label>
+      </div>
+    </div>
   </div>
   <button type="submit" [disabled]="noteForm.invalid" class="ui teal basic button">Add note</button>
 </form>
