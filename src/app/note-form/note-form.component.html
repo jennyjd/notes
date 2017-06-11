@@ -1,4 +1,4 @@
-<form class="ui form note_form" (ngSubmit)="onSubmit($event)">
+<form class="ui form note_form" (ngSubmit)="onSubmit($event,noteForm)" #noteForm="ngForm">
   <h3>Add new note</h3>
   <div class="field">
     <label>Title</label>
@@ -12,5 +12,5 @@
     <label>Pick note color</label>
     <input [(colorPicker)]="note.color" [style.background]="note.color" [value]="note.color"/>
   </div>
-  <button type="submit" class="ui teal basic button">Add note</button>
+  <button type="submit" [disabled]="noteForm.invalid" class="ui teal basic button">Add note</button>
 </form>
