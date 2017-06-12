@@ -11,8 +11,19 @@ import NoteService from './note/note.service';
 export class AppComponent implements OnInit {
   title: string = 'Notes App';
   notes: Note[];
+  edit_form: boolean = false;
+  edit_note: Note;
 
   constructor(private noteService: NoteService) { }
+
+  showEditForm(note): void {
+    this.edit_note = note;
+    this.edit_form = true;
+  }
+
+  closeEditForm(): void {
+    this.edit_form = false;
+  }
 
   ngOnInit(): void {
     this.getNotes();

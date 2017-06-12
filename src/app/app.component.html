@@ -5,11 +5,18 @@
   </h1>
   <div class="container">
     <div class="note_form_container">
-      <app-note-form></app-note-form>
+      <app-note-form
+        [edit]="edit_form"
+        [edit_note]="edit_note"
+        (onCloseEdit)="closeEditForm()"
+      >
+      </app-note-form>
     </div>
     <div class="note_container">
-      <app-note *ngFor="let note of notes"
+      <app-note
+        *ngFor="let note of notes"
         [note]="note"
+        (onEdit)="showEditForm($event)"
       >
       </app-note>
     </div>

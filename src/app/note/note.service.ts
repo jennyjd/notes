@@ -29,6 +29,14 @@ class NoteService {
       }
     });
   }
+
+  updateNote(edit_note: Note) {
+    this.notes.forEach((note, ind) => {
+      if (note.id == edit_note.id) {
+        this.notes.splice(ind, 1, edit_note);
+      }
+    });
+  }
 }
 
 export default NoteService;

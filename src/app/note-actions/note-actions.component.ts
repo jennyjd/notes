@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class NoteActionsComponent {
    @Output() onDelete: EventEmitter<any> = new EventEmitter();
+   @Output() onEdit: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
@@ -14,4 +15,7 @@ export class NoteActionsComponent {
     this.onDelete.emit();
   }
 
+  edit(): void {
+    this.onEdit.emit();
+  }
 }
