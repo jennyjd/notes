@@ -7,10 +7,10 @@ class NoteService {
 
   constructor() {
     this.notes = [
-      new Note('Заголовок', 'кекус пекус', '#f9aaaa', 'black'),
-      new Note('Трав овар', 'трали вали', 'rgba(84,218,64,0.34)', 'black'),
-      new Note('Вроыв ыоп', 'юпи тупи', 'rgba(17,197,255,0.31)', 'black'),
-      new Note('Вываол', 'чака лака', '#0e1d5c', 'white'),
+      new Note('14/06/2017', '14:00 - Собрание по дипломному проекту', '#b81247', 'white'),
+      new Note('20/06/2017', 'Защита', '#ff500d', 'white'),
+      new Note('Купить', '1.молоко<br />2.хлеб', '#bcff73', 'black'),
+      new Note('Планы на лето', '...', 'rgba(44,220,163,0.54)', 'black'),
     ];
   }
 

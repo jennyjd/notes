@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
-import { NgSemanticModule } from "ng-semantic/ng-semantic";
+import { NgSemanticModule } from "ng-semantic";
 import { ColorPickerModule } from 'angular4-color-picker';
 
 import { AppComponent } from './app.component';

@@ -2,7 +2,7 @@
 <div class="note" [style.background]="note.background_color" [style.color]="note.text_color" (mouseenter)="toggleActions()" (mouseleave)="toggleActions()">
   <p class="note_header">{{note.title}}</p>
   <div class="ui divider"></div>
-  <div class="note_text">{{note.text}}</div>
+  <div class="note_text" [innerHTML]="note.text"></div>
   <app-note-actions
     *ngIf="displayActions"
     (onDelete)="deleteNote()"

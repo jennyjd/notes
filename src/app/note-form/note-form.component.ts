@@ -36,6 +36,7 @@ export class NoteFormComponent implements OnChanges{
 
   addNote(e): void {
     e.preventDefault();
+    this.note.text = this.note.text.replace(/\n\r?/g, '<br />');
     this.noteService.addNote(this.note);
     this.clearForm();
   }
