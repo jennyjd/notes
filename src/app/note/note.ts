@@ -1,17 +1,30 @@
+import { IMyDate } from 'mydatepicker';
+
 class Note {
   id: number;
   title: string;
   text: string;
-  background_color: string;
-  text_color: string;
+  date: { date:IMyDate };
   static nextId: number = 0;
 
-  constructor(title: string = '', text: string = '', background_color: string = '#fff', text_color: string = 'black') {
+  static todayDate = Note.setDefaultDate();
+
+  constructor(title: string = '', text: string = '', date: { date:IMyDate } = Note.todayDate) {
     this.id = Note.nextId++;
     this.title = title;
     this.text = text;
-    this.background_color = background_color;
-    this.text_color = text_color;
+    this.date = date;
+  }
+
+  static setDefaultDate() {
+    let date = new Date();
+    return {
+      date: {
+        year: date.getFullYear(),
+        month: date.getMonth(),
+        day: date.getDate()
+      }
+    }
   }
 }
 

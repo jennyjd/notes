@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { NgSemanticModule } from "ng-semantic";
 import { ColorPickerModule } from 'angular4-color-picker';
+import { MyDatePickerModule } from 'mydatepicker';
 
 import { AppComponent } from './app.component';
 import { NoteComponent } from './note/note.component';
@@ -20,7 +21,8 @@ import { NoteActionsComponent } from './note-actions/note-actions.component';
     BrowserModule,
     NgSemanticModule,
     ColorPickerModule,
-    FormsModule
+    FormsModule,
+    MyDatePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

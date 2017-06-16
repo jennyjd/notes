@@ -23,6 +23,7 @@
     "@angular/router": "^4.0.0",
     "angular4-color-picker": "^1.4.2",
     "core-js": "^2.4.1",
+    "mydatepicker": "^2.0.20",
     "ng-semantic": "^1.1.13",
     "node-sass": "^4.5.3",
     "rxjs": "^5.1.0",

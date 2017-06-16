@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import { ColorPickerService } from 'angular4-color-picker';
+import { IMyDpOptions } from 'mydatepicker';
 import { NgForm } from '@angular/forms';
 import NoteService from '../note/note.service';
 import Note from '../note/note';
@@ -16,6 +17,10 @@ export class NoteFormComponent implements OnChanges{
   @Input() edit: boolean;
   @Input() edit_note: Note;
   @Output() onCloseEdit: EventEmitter<any> = new EventEmitter();
+  myDatePickerOptions: IMyDpOptions = {
+    dateFormat: 'dd.mm.yyyy',
+    // disableSince: {year: 2016, month: 6, day: 26}
+  };
 
   constructor(private cpService: ColorPickerService, private noteService: NoteService) {}
 
